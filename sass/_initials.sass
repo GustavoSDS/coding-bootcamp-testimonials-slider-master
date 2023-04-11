@@ -1,0 +1,33 @@
+@use 'variables' as var
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: var.$Font-Family
+
+.container
+    width: 375px
+    height: 100vh
+    min-height: 667px
+    margin: auto
+    background:
+        image: url('../images/pattern-curve.svg')
+        size: contain
+        repeat: no-repeat
+        position: left 105%
+
+    @media screen and ( min-width: 1240px )
+        width: 1440px
+        height: 100vh
+        min-height: 800px
+        background:
+            size: 80%
+            position: left 110%
+
+.attribution
+    font-size: 11px
+    text-align: center
+    a
+        color: hsl(228, 45%, 44%)

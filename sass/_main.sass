@@ -1,0 +1,106 @@
+@use 'variables' as var
+.card
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    background:
+        image: url('../images/pattern-bg.svg')
+        repeat: no-repeat
+        size: 86%
+        position: center 25px
+    &__details
+        width: 310px
+        background:
+            image: url('../images/pattern-quotes.svg')
+            repeat: no-repeat
+            size: 20%
+            position: center top
+        padding-top: 30px
+
+    &__text
+        color: var.$Dark-Blue
+        font-size: 1.125rem
+        text-align: center
+        font-weight: 300
+    &__author
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: 24px
+    &__name
+        font-weight: 700
+        font-size: 1.125rem
+    &__profession
+        margin-top: 4px
+        color: var.$Grayish-Blue
+
+    &__image-buttons
+        width: 250px
+        height: 253px
+        position: relative
+        margin: 54px auto 56px
+        border-radius: 8px
+        box-shadow: -3px 20px 47px -25px var.$Dark-Blue
+        background:
+            size: contain
+            position: center
+            repeat: no-repeat
+
+    &__buttons
+        width: 80px
+        height: 40px
+        position: absolute
+        bottom: calc( 0px - 20px )
+        left: 50%
+        transform: translateX(-50%)
+        border-radius: 20px
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        background-color: white
+
+    &__button-prev, &__button-next
+        border: none
+        &:hover
+            cursor: pointer
+
+    @media screen and ( min-width: 1240px )
+        flex-direction: row
+        justify-content: space-between
+        align-items: unset
+        height: 100%
+        background:
+            size: 48.5%
+            position: 90% 17%
+
+        &__details
+            position: relative
+            z-index: 1
+            width: 627px
+            height: 350px
+            margin: auto -200px auto 155px
+            padding-top: 70px
+            background:
+                size: 20%
+                position: 95px top
+
+        &__text
+            font-size: 2rem
+            text-align: left
+
+        &__author
+            flex-direction: row
+        &__name
+            margin-right: 10px
+            font-size: 1.25rem
+        &__profession
+            font-size: 1.25rem
+            margin: 0
+
+        &__image-buttons
+            width: 540px
+            height: 540px
+            margin: 113px 165px 0 0
+
+        &__buttons
+            left: 115px
