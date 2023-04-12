@@ -17,17 +17,17 @@ const ICONPREV = document.querySelector("#icon-prev");
 fetch('../data.json')
     .then(response => response.json())
     .then(data => {
-        addDatatoCard(data[0].image, data[0].text, data[0].name, data[0].profession);
+        addDatatoCard(data[1].image, data[1].text, data[1].name, data[1].profession);
 
-        BTNPREV.addEventListener('click', () => {
-            addDatatoCard(data[0].image, data[0].text, data[0].name, data[0].profession);
-            ICONEXT.src = '../images/icon-next-hover.svg'; 
-            ICONPREV.src = '../images/icon-prev.svg'; 
-        })
         BTNEXT.addEventListener('click', () => {
-            addDatatoCard(data[1].image, data[1].text, data[1].name, data[1].profession);
+            addDatatoCard(data[0].image, data[0].text, data[0].name, data[0].profession);
             ICONPREV.src = '../images/icon-prev-hover.svg'; 
             ICONEXT.src = '../images/icon-next.svg'; 
+        })
+        BTNPREV.addEventListener('click', () => {
+            addDatatoCard(data[1].image, data[1].text, data[1].name, data[1].profession);
+            ICONEXT.src = '../images/icon-next-hover.svg'; 
+            ICONPREV.src = '../images/icon-prev.svg'; 
         })
 
     })

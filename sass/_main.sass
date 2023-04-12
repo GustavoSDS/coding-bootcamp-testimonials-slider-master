@@ -50,13 +50,13 @@
         width: 80px
         height: 40px
         position: absolute
-        bottom: calc( 0px - 20px )
+        bottom: -20px
         left: 50%
         transform: translateX(-50%)
         border-radius: 20px
         display: flex
         align-items: center
-        justify-content: space-evenly
+        justify-content: space-around
         background-color: white
 
     &__button-prev, &__button-next
@@ -78,7 +78,7 @@
             z-index: 1
             width: 627px
             height: 350px
-            margin: auto -200px auto 155px
+            margin: auto -200px auto 170px
             padding-top: 70px
             background:
                 size: 20%
@@ -103,4 +103,9 @@
             margin: 113px 165px 0 0
 
         &__buttons
+
+            width: 112px
+            height: 56px
+            border-radius: 28px
             left: 115px
+            bottom: -28px
